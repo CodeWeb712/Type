@@ -17,9 +17,6 @@ var element = document.getElementById('w');
 function k() {
     div.parentNode.removeChild(div);
     element.style.opacity = "100%";
-}
-
-function loadParagraph() {
     const ranIndex = Math.floor(Math.random() * paragraphs.length);
     typingText.innerHTML = "";
     paragraphs[ranIndex].split("").forEach(char => {
@@ -94,6 +91,5 @@ function resetGame() {
     cpmTag.innerText = 0;
 }
 
-loadParagraph();
 inpField.addEventListener("input", initTyping);
 tryAgainBtn.addEventListener("click", resetGame);
